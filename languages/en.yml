@@ -1,0 +1,20 @@
+index:
+  home: 'home'
+  search: 'Search'
+  archive: 'archive'
+  category: 'category'
+  uncategorized: 'uncategorized'
+  tag: 'tag'
+nav:
+  next: 'Next'
+  prev: 'Prev'
+  older: 'Older'
+  newer: 'Newer'
+widget:
+  author: 'author'
+  recents: 'recents'
+  archives: 'archives'
+  categories: 'categories'
+  links: 'links'
+  tags: 'tags'
+  tag_cloud: 'tag cloud'

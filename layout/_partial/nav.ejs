@@ -1,0 +1,24 @@
+<% if (post.prev || post.next){ %>
+<nav class="footer-nav">
+  <% if (post.prev) { %>
+    <div class="footer-nav__prev">
+      <div class="footer-nav__label">
+        <%= __('nav.newer') %>
+      </div>
+      <a href="<%- url_for(post.prev.path) %>">
+        <%= post.prev.title %>
+      </a>
+    </div>
+  <% } %>
+  <% if (post.next){ %>
+    <div class="footer-nav__next">
+      <div class="footer-nav__label">
+        <%= __('nav.older') %>
+      </div>
+      <a href="<%- url_for(post.next.path) %>">
+        <%= post.next.title %>
+      </a>
+    </div>
+  <% } %>
+</nav>
+<% } %>

@@ -1,0 +1,41 @@
+<div class="archive">
+  <% switch (type) {
+      case 'archive':
+        const title = page.year || __('widget.archives');
+  %>
+      <h2 class="archive-title subtitle is-4"><%= title %></h2>
+  <%
+        break;
+      case 'tag': %>
+      <h2 class="archive-title subtitle is-4"><%= page.tag %></h2>
+  <%
+        break;
+      case 'index': %>
+      <h2 class="archive-title subtitle is-4"><%= __('widget.recents') %></h2>
+  <% } %>
+  <% page.posts.each(post => { %>
+    <article class="archive-item media">
+      <figure class="archive-thumbnail media-left">
+        <%- partial('_partial/thumbnail', { post: post, hasLink: false }) %>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <%- partial('_partial/date', { datetime: post.date }) %>
+          <h3 class="archive-title title is-5">
+            <a href="<%- url_for((post.link ? post.link : post.path)) %>">
+              <%=post.title %>
+            </a>
+          </h3>
+        </div>
+      </div>
+    </article>
+  <% }) %>
+</div>
+<% if (page.total > 1) { %>
+  <nav class="pagination">
+    <%- paginator({
+      prev_text: '&laquo; ' + __('nav.prev'),
+      next_text: __('nav.next') + ' &raquo;'
+    }) %>
+  </nav>
+<% } %>

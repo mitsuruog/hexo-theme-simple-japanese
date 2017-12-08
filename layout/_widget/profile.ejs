@@ -1,0 +1,22 @@
+<div class="widget-wrap">
+  <div class="widget-title"><%= __('widget.author') %></div>
+  <aside class="profile media widget">
+    <figure class="profile-avatar media-left">
+      <div style="background-image:url('<%=config.avatar %>')" class="avatar" alt="<%=config.author %>"></div>
+    </figure>
+    <div class="media-content">
+      <p>
+        <strong>
+          <%=config.author %>
+          <span class="icon">
+            <a href="<%- url_for(theme.contact.url) %>" target="_blank">
+              <i class="fa fa-<%=theme.contact.icon %>"></i>
+            </a>
+          </span>
+        </strong>
+        <br>
+        <%= config.author_title %>
+      </p>
+    </div>
+  </aside>
+</div>

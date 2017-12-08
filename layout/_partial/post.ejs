@@ -1,0 +1,12 @@
+<article class="post">
+  <figure class="post-thumbnail">
+    <%- partial('thumbnail', { post: post, hasLink: false }) %>
+  </figure>
+  <%- partial('date', { datetime: post.date }) %>
+  <h1 class="title"><%=post.title %></h1>
+  <%- partial('tag', { post: post }) %>
+  <div class="content">
+    <%- post.content %>
+  </div>
+  <%- partial('nav', { post: post }) %>
+</article>

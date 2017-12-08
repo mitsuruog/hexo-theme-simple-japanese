@@ -1,0 +1,28 @@
+<% if (site.posts.length) { %>
+  <div class="widget-wrap">
+    <div class="widget-title"><%= __('widget.recents') %></div>
+    <div class="widget">
+      <ul class="recent-post">
+        <% site.posts.sort('date', -1).limit(5).each(post => { %>
+          <li class="recent-post-item media">
+            <figure class="media-left">
+              <%- partial('../_partial/thumbnail.ejs', { post: post, hasLink: true }) %>
+            </figure>
+            <div class="media-content">
+              <p class="">
+                <a href="<%- url_for((post.link?post.link:post.path)) %>" class="">
+                  <%= post.title %>
+                </a>
+              </p>
+              <p class="">
+                <small>
+                  <%- partial('../_partial/date.ejs', { datetime: post.date }) %>
+                </small>
+              </p>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+<% } %>

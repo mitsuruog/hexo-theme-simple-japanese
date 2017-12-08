@@ -1,0 +1,16 @@
+<%- partial('_partial/head') %>
+<body>
+  <%- partial('_partial/header') %>
+  <div class="container">
+    <div class="columns">
+      <div class="main column">
+        <%- body %>
+      </div>
+      <div class="sidebar column is-4">
+        <%- partial('_partial/sidebar') %>
+      </div>
+    </div>
+  </div>
+  <%- partial('_partial/footer') %>
+</body>
+</html>

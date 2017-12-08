@@ -1,0 +1,10 @@
+<%
+if (post.thumbnail) {
+  if (hasLink) { %>
+  <a href="<%- url_for(post.link ? post.link : post.path) %>">
+    <div style="background-image:url('<%=post.thumbnail %>')" class="thumbnail" alt="<%=post.title %>"></div>
+  </a>
+<% } else { %>
+  <div style="background-image:url('<%=post.thumbnail %>')" class="thumbnail" alt="<%=post.title %>"></div>
+<% }
+} %>
