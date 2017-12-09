@@ -1,8 +1,8 @@
-<div class="widget-wrap" itemscope itemtype="http://schema.org/Person">
+<div class="widget-wrap" id="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <div class="widget-title"><%= __('widget.author') %></div>
   <aside class="profile media widget">
     <figure class="profile-avatar media-left">
-      <meta itemprop="image" content="  <%=config.avatar %>"></meta>
+      <meta itemprop="image" content="<%=config.avatar %>"></meta>
       <div style="background-image:url('<%=config.avatar %>')" class="avatar" alt="<%=config.author %>"></div>
     </figure>
     <div class="media-content">

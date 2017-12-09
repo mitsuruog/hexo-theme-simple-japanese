@@ -1,4 +1,4 @@
-<div class="archive">
+<div class="archive" itemscope itemtype="http://schema.org/Blog">
   <% switch (type) {
       case 'archive':
         const title = page.year || __('widget.archives');
@@ -14,7 +14,7 @@
       <h2 class="archive-title subtitle is-4"><%= __('widget.recents') %></h2>
   <% } %>
   <% page.posts.each(post => { %>
-    <article class="archive-item media">
+    <article class="archive-item media" itemprop="blogPosts">
       <figure class="archive-thumbnail media-left">
         <%- partial('_partial/thumbnail', { post: post, hasLink: false }) %>
       </figure>
