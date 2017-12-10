@@ -3,6 +3,10 @@ Hexo blog theme. it makes Japanese more readable and beautiful.
 
 ![example](images/image.png)
 
+## Demo
+
+- https://blog.mitsuruog.info/
+
 ## Installation
 1. Clone this repo into `theme/simple-japanese`.
 
