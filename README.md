@@ -1,6 +1,8 @@
 # hexo-theme-simple-japanese
 Hexo blog theme. it makes Japanese more readable and beautiful.
 
+![example](images/image.png)
+
 ## Installation
 1. Clone this repo into `theme/simple-japanese`.
 
