@@ -1,14 +1,13 @@
-<div class="widget-wrap" id="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<div class="widget-wrap">
   <div class="widget-title"><%= __('widget.author') %></div>
   <aside class="profile media widget">
     <figure class="profile-avatar media-left">
-      <meta itemprop="image" content="<%=config.avatar %>"></meta>
       <div style="background-image:url('<%=config.avatar %>')" class="avatar" alt="<%=config.author %>"></div>
     </figure>
     <div class="media-content">
       <p>
         <strong>
-          <span itemprop="name"><%=config.author %></span>
+          <span><%=config.author %></span>
           <span class="icon">
             <a href="<%- url_for(theme.contact.url) %>" target="_blank">
               <i class="fa fa-<%=theme.contact.icon %>"></i>
@@ -16,7 +15,7 @@
           </span>
         </strong>
         <br>
-        <span itemprop="description"><%= config.author_title %></span>
+        <span><%= config.author_title %></span>
       </p>
     </div>
   </aside>
