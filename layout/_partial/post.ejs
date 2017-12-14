@@ -1,16 +1,11 @@
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting" itemref="author">
-  <meta itemprop="dateModified" content="<%=date(post.updated, 'YYYY-MM-DD') %>"></meta>
-  <meta itemprop="headline" content="<%-strip_html(post.content).substring(0, 110) %>"></meta>
+<article class="post">
   <figure class="post-thumbnail">
-    <% if(post.thumbnail) { %>
-      <meta itemprop="image" content="  <%=post.thumbnail %>"></meta>
-    <% } %>
     <%- partial('thumbnail', { post: post, hasLink: false }) %>
   </figure>
-  <span itemprop="datePublished"><%- partial('date', { datetime: post.date }) %></span>
-  <h1 class="title" itemprop="name"><%=post.title %></h1>
+  <span><%- partial('date', { datetime: post.date }) %></span>
+  <h1 class="title"><%=post.title %></h1>
   <%- partial('tag', { post: post }) %>
-  <div class="content" itemprop="articleBody">
+  <div class="content">
     <%- post.content %>
   </div>
   <%- partial('nav', { post: post }) %>

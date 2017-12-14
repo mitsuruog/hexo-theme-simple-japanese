@@ -1,0 +1,64 @@
+<%
+  let amp;
+
+  const mainEntityOfPage = {
+    "@type": "WebPage",
+    "@id": url
+  };
+
+  const author = {
+    "@type": "Person",
+    name: config.author,
+    image: config.avatar,
+    description: config.author_title
+  };
+
+  const publisher = {
+    "@type": "Organization",
+    name: config.author,
+    logo: {
+      "@type": "ImageObject",
+      url: config.avatar
+    }
+  };
+
+  if(is_post()) {
+    // for post
+    amp = {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      headline: page.title,
+      name: page.title,
+      image: page.thumbnail,
+      datePublished: page.date,
+      dateModified: page.updated,
+      mainEntityOfPage: mainEntityOfPage,
+      author: author,
+      publisher: publisher
+    };
+  } else {
+    // for home, archive, tag
+    const itemList = site.posts.map((post, index) => {
+      return {
+        "@type":"ListItem",
+        "position": index + 1,
+        "url": url_for(post.path)
+      };
+    });
+
+    amp = [{
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      name: config.title,
+      description: config.description || config.subtitle,
+      author: author
+    }, {
+      "@context": "http://schema.org",
+      "@type": "ItemList",
+      itemListElement: itemList
+    }];
+  }
+%>
+<script type="application/ld+json">
+  <%- JSON.stringify(amp, null, 2) %>
+</script>
