@@ -7,6 +7,7 @@ var title = page.title;
   <meta charset="utf-8">
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="amphtml" href="<%=url %>">
   <link rel="canonical" href="<%=url %>">
   <%- open_graph({
     image: page.thumbnail,
