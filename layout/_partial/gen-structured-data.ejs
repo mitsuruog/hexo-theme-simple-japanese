@@ -1,5 +1,5 @@
 <%
-  let amp;
+  let structured;
 
   const mainEntityOfPage = {
     "@type": "WebPage",
@@ -24,7 +24,7 @@
 
   if(is_post()) {
     // for post
-    amp = {
+    structured = {
       "@context": "http://schema.org",
       "@type": "BlogPosting",
       headline: page.title,
@@ -46,7 +46,7 @@
       };
     });
 
-    amp = [{
+    structured = [{
       "@context": "http://schema.org",
       "@type": "WebPage",
       name: config.title,
@@ -60,5 +60,5 @@
   }
 %>
 <script type="application/ld+json">
-  <%- JSON.stringify(amp, null, 2) %>
+  <%- JSON.stringify(structured, null, 2) %>
 </script>

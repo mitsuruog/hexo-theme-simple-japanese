@@ -71,3 +71,8 @@ google_analytics: GTM-XXXXXX
 
 ### favicon
 Add icon file `source/favicon.ico`.
+
+### AMP
+Use this plugin as well.
+
+- [tea3/hexo\-generator\-amp: AMP ⚡ HTML \(Accelerated Mobile Pages\) generator for Hexo\.](https://github.com/tea3/hexo-generator-amp)
