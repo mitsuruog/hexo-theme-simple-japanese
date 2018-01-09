@@ -1,10 +1,11 @@
 <%
 if (post.thumbnail) {
+  const sizeClass = type ? `is-${type}` : "";
   if (hasLink) { %>
   <a href="<%- url_for(post.link ? post.link : post.path) %>">
-    <div style="background-image:url('<%=post.thumbnail %>')" class="thumbnail" alt="<%=post.title %>"></div>
+    <img src="<%=post.thumbnail %>" class="thumbnail <%=sizeClass %>" alt="<%=post.title %>">
   </a>
 <% } else { %>
-  <div style="background-image:url('<%=post.thumbnail %>')" class="thumbnail" alt="<%=post.title %>"></div>
+  <img src="<%=post.thumbnail %>" class="thumbnail <%=sizeClass %>" alt="<%=post.title %>">
 <% }
 } %>

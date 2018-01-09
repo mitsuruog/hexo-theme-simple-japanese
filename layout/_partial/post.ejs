@@ -1,6 +1,6 @@
 <article class="post">
   <figure class="post-thumbnail">
-    <%- partial('thumbnail', { post: post, hasLink: false }) %>
+    <%- partial('thumbnail', { post: post, hasLink: false, type: "" }) %>
   </figure>
   <span><%- partial('date', { datetime: post.date }) %></span>
   <h1 class="title"><%=post.title %></h1>
