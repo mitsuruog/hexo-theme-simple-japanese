@@ -6,11 +6,11 @@
         <% site.posts.sort('date', -1).limit(5).each(post => { %>
           <li class="recent-post-item media">
             <figure class="media-left">
-              <%- partial('../_partial/thumbnail.ejs', { post: post, hasLink: true }) %>
+              <%- partial('../_partial/thumbnail.ejs', { post: post, hasLink: true, type: "6x6" }) %>
             </figure>
             <div class="media-content">
               <p class="">
-                <a href="<%- url_for((post.link?post.link:post.path)) %>" class="">
+                <a href="<%- url_for((post.link ? post.link : post.path)) %>" class="">
                   <%= post.title %>
                 </a>
               </p>
