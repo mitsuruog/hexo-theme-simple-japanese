@@ -17,8 +17,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <%- css('css/style') %>
+  <% if (config.simple_japanese.custom_assets.css) { %>
+    <%- css(config.simple_japanese.custom_assets.css) %>
+  <% } %>
   <%- partial('gen-structured-data') %>
   <% if (is_post() && config.generator_amp){ %>
     <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path.replace(".html", "") %>/amp/index.html">
+  <% } %>
+  <% if (config.simple_japanese.custom_assets.js) { %>
+    <%- js(config.simple_japanese.custom_assets.js) %>
   <% } %>
 </head>

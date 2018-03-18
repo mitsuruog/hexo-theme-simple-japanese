@@ -67,6 +67,14 @@ contact:
 
 # Google tag manager
 google_analytics: GTM-XXXXXX
+
+# Custom assets
+simple_japanese:
+  custom_assets:
+    css: css/custom.css
+    // <link rel="stylesheet" href="/css/custom.css" type="text/css">
+    js: js/custom.js
+    // <script type="text/javascript" src="/js/custom.js"></script>
 ```
 
 ### favicon
