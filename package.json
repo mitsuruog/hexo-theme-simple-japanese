@@ -1,0 +1,23 @@
+{
+  "name": "hexo-theme-simple-japanese",
+  "version": "1.0.3",
+  "description": "Hexo blog theme. it makes Japanese more readable and beautiful.",
+  "main": "layout/layout.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "release-changelog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitsuruog/hexo-theme-simple-japanese.git"
+  },
+  "keywords": [
+    "hexo"
+  ],
+  "author": "mitsuruog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mitsuruog/hexo-theme-simple-japanese/issues"
+  },
+  "homepage": "https://github.com/mitsuruog/hexo-theme-simple-japanese#readme"
+}
