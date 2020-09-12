@@ -2,12 +2,12 @@
   <div class="widget-title"><%= __('widget.author') %></div>
   <aside class="profile media widget">
     <figure class="profile-avatar media-left">
-      <img src="<%=config.avatar %>" class="avatar" alt="<%=config.author %>">
+      <img src="<%- url_for(theme.avatar) %>" class="avatar" alt="<%=theme.author %>">
     </figure>
     <div class="media-content">
       <p>
         <strong>
-          <span><%=config.author %></span>
+          <span><%=theme.author %></span>
           <span class="icon">
             <a href="<%- url_for(theme.contact.url) %>" target="_blank">
               <i class="fa fa-<%=theme.contact.icon %>"></i>
@@ -15,7 +15,7 @@
           </span>
         </strong>
         <br>
-        <span><%= config.author_title %></span>
+        <span><%= theme.author_title %></span>
       </p>
     </div>
   </aside>
